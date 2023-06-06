@@ -9,8 +9,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent implements OnInit{
 
-  projects : ProjectList = new ProjectList([]);
+  projects : ProjectList | undefined;
 
+  showMenu = false;
+  
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
@@ -25,5 +27,10 @@ export class AppComponent implements OnInit{
       element.scrollIntoView({ behavior: 'smooth' });
     }
   }
+
+  toggleNavbar(){
+    this.showMenu = !this.showMenu;
+  }
+
 
 }

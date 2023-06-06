@@ -1,18 +1,40 @@
-<header class="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900">
-  <nav class="container mx-auto flex items-center justify-between py-4">
-    <div class="flex items-center">
-      <img src="path/to/logo.png" alt="Logo" class="h-8 mr-4">
-      <ul class="flex space-x-4">
-        <li>
-          <a href="#" class="text-white nav-link" (click)="navigateToElement('Presentations')">Presentations</a>
-        </li>
-        <li>
-          <a href="#" class="text-white nav-link" (click)="navigateToElement('Projets')">Projets</a>
-        </li>
-        <li>
-          <a href="#" class="text-white nav-link" (click)="navigateToElement('Contacts')">Contacts</a>
-        </li>
-      </ul>
+<header>
+  <nav class="relative flex flex-wrap items-center justify-between px-2 py-3 bg-slate-500 mb-3">
+    <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
+      <div class="w-full relative flex justify-between lg:w-auto  px-4 lg:static lg:block lg:justify-start">
+        <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
+          >
+          Portfolio
+        </a>
+        <button
+          class="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+          type="button" (click)="toggleNavbar()">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <div [ngClass]="{'hidden': !showMenu, 'flex': showMenu}" class="lg:flex lg:flex-grow items-center">
+        <ul class="flex flex-col lg:flex-row list-none ml-auto">
+          <li class="nav-item">
+            <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+              href="#Presentations">
+              <i class="fab fa-facebook-square text-lg leading-lg text-white opacity-75"></i><span
+                class="ml-2">Share</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+              href="#Projets">
+              <i class="fab fa-twitter text-lg leading-lg text-white opacity-75"></i><span class="ml-2">Tweet</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+              href="#Contacts">
+              <i class="fab fa-pinterest text-lg leading-lg text-white opacity-75"></i><span class="ml-2">Pin</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 </header>
@@ -21,12 +43,12 @@
     <!-- Content for "Presentations" section goes here -->
   </section>
   <section id="Projets">
- 
-      <div class="flex flex-col items-center justify-center w-full">
-        <div *ngFor="let project of projects.projects">
-          <app-project class="" [project]="project"></app-project>
-        </div>
+
+    <div *ngIf="projects" class="flex flex-col items-center justify-center w-full">
+      <div *ngFor="let project of projects.projects">
+        <app-project class="" [project]="project"></app-project>
       </div>
+    </div>
 
   </section>
   <section id="Contacts">
