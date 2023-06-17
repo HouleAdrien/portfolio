@@ -25,7 +25,7 @@
             "description": "Un réseau social simple fait en angular avec Gael Parain , Maxime Béziat et Charles Roby.",
             "startYear": "2022",
             "endYear": "2022",
-            "status": "Completed",
+            "status": "completed",
             "artworkurl": "./assets/indiagram.png",
             "trailerurl": "",
             "codeurl": ""
@@ -35,7 +35,7 @@
             "description": "Un site three.js fait en 48h lors d'un exercice de groupe de mon école Ynov,<br> afin de promouvoir une compagnie autour du tourisme spatial.",
             "startYear": "2022",
             "endYear": "2022",
-            "status": "Completed",
+            "status": "completed",
             "artworkurl": "./assets/spacearound.png",
             "trailerurl": "https://houleadrien.github.io/SpaceAround.github.io/",
             "codeurl": ""
@@ -45,7 +45,7 @@
             "description": "Un projet Opengl fait avec Rohan Ferre,<br> dans lequel on peut se balader dans un scène 3d avec une lumière allumé et tirer sur une cible.",
             "startYear": "2021",
             "endYear": "2021",
-            "status": "Completed",
+            "status": "completed",
             "artworkurl": "./assets/opengl.png",
             "trailerurl": "https://youtu.be/xrMmBEJsRpY",
             "codeurl": ""
@@ -55,7 +55,7 @@
             "description": "Un projet java fait avec Rohan Ferre lors de mon iut,<br> dans lequel on peut jouer au jeux de pentes.",
             "startYear": "2019",
             "endYear": "2020",
-            "status": "Completed",
+            "status": "completed",
             "artworkurl": "./assets/pente.png",
             "trailerurl": "",
             "codeurl": ""
