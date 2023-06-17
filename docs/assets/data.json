@@ -12,7 +12,7 @@
         },
         {
         "name": "Ship Rider",
-        "description": "Un jeu de courses de bateaux en cours de développement, avec Charles Roby et Maxime Béziat. <br> Ce jeu dispose pour l'instant d'un mode solo complet mais d'un mode multijoueur en cours de développement.",
+        "description": "Un jeu de courses de bateaux en cours de développement, avec Charles Roby et Maxime Béziat. Ce jeu dispose pour l'instant d'un mode solo complet mais d'un mode multijoueur en cours de développement.",
         "startYear": "2022",
         "endYear": "2023",
         "status": "ongoing",
@@ -32,7 +32,7 @@
         },
         {
             "name": "Space Around",
-            "description": "Un site three.js fait en 48h lors d'un exercice de groupe de mon école Ynov,<br> afin de promouvoir une compagnie autour du tourisme spatial.",
+            "description": "Un site three.js fait en 48h lors d'un exercice de groupe de mon école Ynov, afin de promouvoir une compagnie autour du tourisme spatial.",
             "startYear": "2022",
             "endYear": "2022",
             "status": "completed",
@@ -42,7 +42,7 @@
         },
         {
             "name": "Projet Opengl",
-            "description": "Un projet Opengl fait avec Rohan Ferre,<br> dans lequel on peut se balader dans un scène 3d avec une lumière allumé et tirer sur une cible.",
+            "description": "Un projet Opengl fait avec Rohan Ferre, dans lequel on peut se balader dans un scène 3d avec une lumière allumé et tirer sur une cible.",
             "startYear": "2021",
             "endYear": "2021",
             "status": "completed",
@@ -52,7 +52,7 @@
         },
         {
             "name": "Jeux de pente ",
-            "description": "Un projet java fait avec Rohan Ferre lors de mon iut,<br> dans lequel on peut jouer au jeux de pentes.",
+            "description": "Un projet java fait avec Rohan Ferre lors de mon iut, dans lequel on peut jouer au jeux de pentes.",
             "startYear": "2019",
             "endYear": "2020",
             "status": "completed",
