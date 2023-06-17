@@ -3,8 +3,25 @@
         <img class="object-cover w-3/6 rounded-t-lg h-96 md:h-auto md:rounded-none md:rounded-l-lg" src={{project.trailerurl}} alt="">
         <div class="flex flex-col justify-between p-4 leading-normal">
             <h2 class="mb-2 text-2xl font-bold tracking-tight text-white">{{project.name}}</h2>
-            <p class="mb-3 font-normal text-gray-400">{{project.description}}</p>
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">{{project.startYear}} - {{project.endYear}}</h5>
+            <p class="mb-3 w-3 font-normal text-gray-400">{{project.description}}</p>
+            <div *ngIf="project.status === 'completed' else ongoing" >
+                <div  *ngIf="project.startYear === project.endYear else oneshot" >
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">{{project.startYear}} - {{project.endYear}}</h5>
+                </div>
+               
+            </div>
+            un bouton youtube utilisant le trailerurl
+            <div *ngIf="project.trailerurl != ''">
+                <a href={{project.trailerurl}} class="flex items-center justify-center px-4 py-2 mt-4 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Voir la démo</a>
+            </div>
         </div>
     </div>
 </div>
+
+<ng-template #ongoing>
+    <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Projet en cours de développpement</h5>
+</ng-template>
+
+<ng-template #oneshot>
+    <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">{{project.startYear}}</h5>
+</ng-template>

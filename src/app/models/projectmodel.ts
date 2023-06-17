@@ -4,6 +4,7 @@ export type Project = {
     startYear: string,
     endYear: string,
     status: string,
+    artworkurl: string,
     trailerurl: string,
     codeurl: string
 }
