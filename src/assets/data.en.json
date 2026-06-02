@@ -1,0 +1,161 @@
+{
+  "profile": {
+    "name": "Adrien Houle",
+    "role": "Software engineer — imaging",
+    "tagline": "I build tools that turn pixels into actionable information.",
+    "location": "France",
+    "bio": [
+      "Software engineer passionate about imaging and geospatial data visualization.",
+      "I work on systems that handle large volumes of imagery, from scientific processing to the interfaces that make them understandable.",
+      "On the side, I tinker with personal projects — from game development to 3D and graphics experiments."
+    ],
+    "photo": "assets/profile.jpg",
+    "email": "adrien.houle@geomatys.com",
+    "links": [
+      { "label": "GitHub", "href": "https://github.com/HouleAdrien" },
+      { "label": "Email", "href": "mailto:adrien.houle@geomatys.com" }
+    ]
+  },
+  "timeline": [
+    {
+      "startYear": "2021",
+      "endYear": "present",
+      "kind": "pro",
+      "title": "Software engineer — imaging",
+      "org": "Geomatys",
+      "summary": "Apprenticeship throughout my Ynov years and the masters, then full-time since graduating. Building tools for processing and visualizing geospatial imagery, integrated into web platforms and data services.",
+      "link": "https://www.geomatys.com"
+    },
+    {
+      "startYear": "2023",
+      "endYear": "2024",
+      "kind": "pro",
+      "title": "M2 — Master Imagine",
+      "org": "University of Montpellier",
+      "summary": "Specialization in image, geometry and graphics computing: image processing, discrete geometry, rendering, stereo vision, ML applied to imaging. Degree obtained while in apprenticeship at Geomatys."
+    },
+    {
+      "startYear": "2022",
+      "endYear": "2023",
+      "kind": "pro",
+      "title": "M1 — Software, Mobile & IoT Expert",
+      "org": "Ynov Toulouse",
+      "summary": "Cross-platform software development, mobile and connected devices. Apprenticeship at Geomatys."
+    },
+    {
+      "startYear": "2021",
+      "endYear": "2022",
+      "kind": "pro",
+      "title": "Bachelor in Computer Science — 3rd year",
+      "org": "Ynov Toulouse",
+      "summary": "Deeper dive into software development and real-time 3D: three.js, game development and web applications. Apprenticeship at Geomatys."
+    },
+    {
+      "startYear": "2019",
+      "endYear": "2021",
+      "kind": "pro",
+      "title": "Two-year technical degree in Computer Science",
+      "org": "IUT",
+      "summary": "Foundations of programming, algorithms and object-oriented development in Java."
+    },
+    {
+      "startYear": "2019",
+      "endYear": "present",
+      "kind": "perso",
+      "title": "Personal projects",
+      "org": "Side projects",
+      "summary": "Game development, 3D experiments, physics simulations, interactive sites and graphics tooling in C++, OpenGL, Unity, Angular and Three.js."
+    }
+  ],
+  "projects": [
+    {
+      "name": "Ship Rider",
+      "description": "Boat racing game in development with Charles Roby and Maxime Béziat. Full single-player mode, multiplayer in progress.",
+      "kind": "perso",
+      "year": "2022 — 2023",
+      "stack": ["Game dev", "Multiplayer"],
+      "thumbnail": "https://img.youtube.com/vi/e6-fkrvjnHo/hqdefault.jpg",
+      "demoUrl": "https://youtu.be/e6-fkrvjnHo"
+    },
+    {
+      "name": "Space Around",
+      "description": "Three.js site built in 48h during a team exercise at Ynov, around space tourism.",
+      "kind": "perso",
+      "year": "2022",
+      "stack": ["Three.js", "JavaScript"],
+      "thumbnail": "",
+      "demoUrl": "https://houleadrien.github.io/SpaceAround.github.io/"
+    },
+    {
+      "name": "Indiagram",
+      "description": "Simple social network in Angular, built as a team with Gaël Parain, Maxime Béziat and Charles Roby.",
+      "kind": "perso",
+      "year": "2022",
+      "stack": ["Angular", "TypeScript"],
+      "thumbnail": ""
+    },
+    {
+      "name": "OpenGL Project",
+      "description": "Explorable 3D scene with dynamic lighting and a shooting system, built with Rohan Ferre.",
+      "kind": "perso",
+      "year": "2021",
+      "stack": ["OpenGL", "C++"],
+      "thumbnail": "https://img.youtube.com/vi/xrMmBEJsRpY/hqdefault.jpg",
+      "demoUrl": "https://youtu.be/xrMmBEJsRpY"
+    },
+    {
+      "name": "Portfolio",
+      "description": "This site — rebuilt in Angular and Tailwind, with a timeline and a project gallery.",
+      "kind": "perso",
+      "year": "2023",
+      "stack": ["Angular", "Tailwind"],
+      "thumbnail": "",
+      "demoUrl": "https://houleadrien.github.io/portfolio/",
+      "codeUrl": "https://github.com/HouleAdrien/portfolio"
+    },
+    {
+      "name": "Fluids3D-cpp",
+      "description": "3D fluid simulation in C++/Qt based on the shallow water equations, with OpenGL rendering: GLSL shaders, skybox, grid, spheres and raymarching. M2 Imagine project.",
+      "kind": "perso",
+      "year": "2023 — 2024",
+      "stack": ["C++", "Qt", "OpenGL", "GLSL"],
+      "thumbnail": "",
+      "codeUrl": "https://github.com/HouleAdrien/Fluids3D-cpp"
+    },
+    {
+      "name": "WMS Environment Analyzer",
+      "description": "Tool for analyzing WMS imagery to detect and classify natural environments. Two approaches: algorithmic and machine learning. Built with Yahnis Saint-Val during the M2 Imagine.",
+      "kind": "perso",
+      "year": "2023 — 2024",
+      "stack": ["C++", "Qt", "GDAL", "Python"],
+      "thumbnail": "",
+      "codeUrl": "https://github.com/HouleAdrien/WMS_Environment_Analyzer"
+    },
+    {
+      "name": "Magical Carnage",
+      "description": "Unity game using hand tracking to cast procedural spells. Experiment around gestures and procedural generation of magical effects.",
+      "kind": "perso",
+      "year": "2023",
+      "stack": ["Unity", "C#", "HLSL"],
+      "thumbnail": "",
+      "codeUrl": "https://github.com/HouleAdrien/Magical_Carnage"
+    },
+    {
+      "name": "Slope Game",
+      "description": "Java project built with Rohan Ferre at the IUT — a board game around the game of slopes.",
+      "kind": "perso",
+      "year": "2019 — 2020",
+      "stack": ["Java"],
+      "thumbnail": ""
+    },
+    {
+      "name": "Qt Recipes",
+      "description": "Recipe management app in C++/Qt, built with Rohan Ferre at the IUT — one of my first C++ projects, with Doxygen documentation and state diagrams.",
+      "kind": "perso",
+      "year": "2020",
+      "stack": ["C++", "Qt"],
+      "thumbnail": "",
+      "codeUrl": "https://github.com/HouleAdrien/qt_recette"
+    }
+  ]
+}

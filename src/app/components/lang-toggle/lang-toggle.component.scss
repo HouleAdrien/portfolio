@@ -1,0 +1,27 @@
+:host {
+  display: inline-flex;
+}
+
+.lang-toggle__viewport {
+  display: inline-block;
+  height: 1em;
+  line-height: 1;
+  overflow: hidden;
+}
+
+.lang-toggle__track {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+  will-change: transform;
+}
+
+.lang-toggle__track.is-fr {
+  transform: translateY(-1em);
+}
+
+.lang-toggle__item {
+  display: block;
+  height: 1em;
+  line-height: 1;
+}

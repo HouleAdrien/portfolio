@@ -1,0 +1,57 @@
+{
+  "nav": {
+    "about": "About",
+    "timeline": "Career",
+    "projects": "Projects",
+    "contact": "Contact",
+    "menu": "Menu",
+    "skipToContent": "Skip to content"
+  },
+  "hero": {
+    "available": "Available — {{location}}",
+    "ctaProjects": "See the projects",
+    "ctaContact": "Get in touch"
+  },
+  "about": {
+    "label": "About",
+    "title": "Pixels, data, interfaces."
+  },
+  "timeline": {
+    "label": "Career",
+    "title": "One timeline, two paths.",
+    "more": "Learn more →"
+  },
+  "projects": {
+    "label": "Projects",
+    "title": "A selection of work.",
+    "filterLabel": "Filter projects",
+    "filterAll": "All",
+    "filterPro": "Pro",
+    "filterPerso": "Personal",
+    "empty": "No projects in this category yet.",
+    "view": "View the project →",
+    "code": "Source code"
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Let's work together.",
+    "lead": "A question, an idea, an imaging project? The easiest is to drop me a line."
+  },
+  "footer": {
+    "rights": "© {{year}} Adrien Houle",
+    "built": "Built with Angular & Tailwind."
+  },
+  "kind": {
+    "pro": "Pro",
+    "perso": "Personal"
+  },
+  "theme": {
+    "toggleLight": "Switch to light theme",
+    "toggleDark": "Switch to dark theme"
+  },
+  "language": {
+    "toggle": "Switch language",
+    "en": "EN",
+    "fr": "FR"
+  }
+}
