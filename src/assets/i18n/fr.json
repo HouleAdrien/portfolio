@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "about": "À propos",
+    "timeline": "Parcours",
+    "projects": "Projets",
+    "presentation": "Présentation",
+    "contact": "Contact",
+    "menu": "Menu",
+    "skipToContent": "Aller au contenu"
+  },
+  "hero": {
+    "available": "Disponible — {{location}}",
+    "ctaProjects": "Voir les projets",
+    "ctaContact": "Me contacter"
+  },
+  "about": {
+    "label": "À propos",
+    "title": "Pixels, données, interfaces."
+  },
+  "timeline": {
+    "label": "Parcours",
+    "title": "Une chronologie, deux trajectoires.",
+    "more": "En savoir plus →"
+  },
+  "projects": {
+    "label": "Projets",
+    "title": "Une sélection de réalisations.",
+    "filterLabel": "Filtrer les projets",
+    "filterAll": "Tous",
+    "filterPro": "Pro",
+    "filterPerso": "Perso",
+    "empty": "Aucun projet dans cette catégorie pour le moment.",
+    "view": "Voir le projet →",
+    "code": "Code source",
+    "byYear": "Par année",
+    "sortToggle": "Inverser l'ordre"
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Travaillons ensemble.",
+    "lead": "Une question, une idée, un projet d'imagerie ? Le plus simple est de m'écrire."
+  },
+  "footer": {
+    "rights": "© {{year}} Adrien Houle",
+    "built": "Construit avec Angular & Tailwind."
+  },
+  "kind": {
+    "pro": "Pro",
+    "perso": "Perso"
+  },
+  "theme": {
+    "toggleLight": "Passer au thème clair",
+    "toggleDark": "Passer au thème sombre"
+  },
+  "language": {
+    "toggle": "Changer de langue",
+    "en": "EN",
+    "fr": "FR"
+  }
+}

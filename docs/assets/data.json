@@ -1,31 +1,109 @@
 {
-    "projects": [
-        {
-        "name": "Project 1",
-        "description": "This is a project",
-        "startYear": "2019",
-        "endYear": "2020",
-        "status": "Completed",
-        "trailerurl": "https://i.imgur.com/fyR4klT.jpeg",
-        "codeurl": ""
-        },
-        {
-        "name": "Project 2",
-        "description": "This is a project",
-        "startYear": "2019",
-        "endYear": "2020",
-        "status": "Completed",
-        "trailerurl": "https://i.imgur.com/QowYK2E.jpeg",
-        "codeurl": ""
-        },
-        {
-        "name": "Project 3",
-        "description": "This is a project",
-        "startYear": "2019",
-        "endYear": "2020",
-        "status": "Completed",
-        "trailerurl": "https://i.imgur.com/mI7cPBr.jpeg",
-        "codeurl": ""
-        }
+  "profile": {
+    "name": "Adrien Houle",
+    "role": "Développeur logiciel — imagerie",
+    "tagline": "Je conçois des outils qui transforment des pixels en informations exploitables.",
+    "location": "France",
+    "bio": [
+      "Développeur passionné par l'imagerie et la visualisation de données géospatiales.",
+      "Je travaille sur des systèmes qui manipulent de grandes quantités d'images, du traitement scientifique aux interfaces qui les rendent compréhensibles.",
+      "À côté, je bricole des projets personnels — du jeu vidéo à des expérimentations 3D et graphiques."
+    ],
+    "photo": "assets/profile.jpg",
+    "email": "adrien.houle@geomatys.com",
+    "links": [
+      { "label": "GitHub", "href": "https://github.com/HouleAdrien" },
+      { "label": "Email", "href": "mailto:adrien.houle@geomatys.com" }
     ]
+  },
+  "timeline": [
+    {
+      "startYear": "2023",
+      "endYear": "présent",
+      "kind": "pro",
+      "title": "Développeur logiciel — imagerie",
+      "org": "Geomatys",
+      "summary": "Développement d'outils de traitement et de visualisation d'images géospatiales, intégration dans des plateformes web et services de données.",
+      "link": "https://www.geomatys.com"
+    },
+    {
+      "startYear": "2021",
+      "endYear": "2023",
+      "kind": "pro",
+      "title": "Mastère Expert Informatique",
+      "org": "Ynov",
+      "summary": "Spécialisation développement logiciel et 3D temps réel. Projets en équipe en three.js, jeu vidéo et applications web."
+    },
+    {
+      "startYear": "2019",
+      "endYear": "2021",
+      "kind": "pro",
+      "title": "DUT Informatique",
+      "org": "IUT",
+      "summary": "Bases de la programmation, algorithmique et développement orienté objet en Java."
+    },
+    {
+      "startYear": "2022",
+      "endYear": "présent",
+      "kind": "perso",
+      "title": "Projets personnels",
+      "org": "Side projects",
+      "summary": "Jeu vidéo, expérimentations 3D, sites interactifs et outils graphiques en Angular, Three.js et OpenGL."
+    }
+  ],
+  "projects": [
+    {
+      "name": "Ship Rider",
+      "description": "Jeu de courses de bateaux en cours de développement avec Charles Roby et Maxime Béziat. Mode solo complet, mode multijoueur en cours.",
+      "kind": "perso",
+      "year": "2022 — 2023",
+      "stack": ["Game dev", "Multijoueur"],
+      "thumbnail": "https://img.youtube.com/vi/e6-fkrvjnHo/hqdefault.jpg",
+      "demoUrl": "https://youtu.be/e6-fkrvjnHo"
+    },
+    {
+      "name": "Space Around",
+      "description": "Site Three.js réalisé en 48h lors d'un exercice de groupe à Ynov, autour du tourisme spatial.",
+      "kind": "perso",
+      "year": "2022",
+      "stack": ["Three.js", "JavaScript"],
+      "thumbnail": "",
+      "demoUrl": "https://houleadrien.github.io/SpaceAround.github.io/"
+    },
+    {
+      "name": "Indiagram",
+      "description": "Réseau social simple en Angular, en équipe avec Gaël Parain, Maxime Béziat et Charles Roby.",
+      "kind": "perso",
+      "year": "2022",
+      "stack": ["Angular", "TypeScript"],
+      "thumbnail": ""
+    },
+    {
+      "name": "Projet OpenGL",
+      "description": "Scène 3D explorable avec lumière dynamique et système de tir, réalisée avec Rohan Ferre.",
+      "kind": "perso",
+      "year": "2021",
+      "stack": ["OpenGL", "C++"],
+      "thumbnail": "https://img.youtube.com/vi/xrMmBEJsRpY/hqdefault.jpg",
+      "demoUrl": "https://youtu.be/xrMmBEJsRpY"
+    },
+    {
+      "name": "Portfolio",
+      "description": "Ce site — refonte en Angular et Tailwind, avec une chronologie et une galerie de projets.",
+      "kind": "perso",
+      "year": "2023",
+      "stack": ["Angular", "Tailwind"],
+      "thumbnail": "",
+      "demoUrl": "https://houleadrien.github.io/portfolio/",
+      "codeUrl": "https://github.com/HouleAdrien/portfolio"
+    },
+    {
+      "name": "Jeux de pente",
+      "description": "Projet Java réalisé avec Rohan Ferre à l'IUT — jeu de plateau autour du jeu de pentes.",
+      "kind": "perso",
+      "year": "2019 — 2020",
+      "stack": ["Java"],
+      "thumbnail": ""
+    }
+  ]
 }

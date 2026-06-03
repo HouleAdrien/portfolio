@@ -1,95 +1,87 @@
-<header
-  class="header sticky top-0 bg-white shadow-md flex flex-col sm:flex-row items-center space-around px-4 sm:px-8 py-2">
-  <!-- logo -->
-  <h1 class="w-full sm:w-1/3 mb-4 sm:mb-0">
-    <a href="#Presentations">
-      <div class="flex items-center">
-        <img src="../assets/controller.png" class="h-16 w-auto">
-        <span
-          class="ml-2 sm:ml-10 text-2xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">Portfolio</span>
-      </div>
-    </a>
-  </h1>
+<ng-container *transloco="let t">
+  <a
+    href="#main"
+    class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-ink focus:px-3 focus:py-2 focus:text-surface"
+  >
+    {{ t('nav.skipToContent') }}
+  </a>
 
-  <!-- navigation -->
-  <nav class="nav font-semibold text-lg w-full sm:w-2/3">
-    <ul class="flex flex-col sm:flex-row items-center justify-center">
-      <li class="flex items-center text-gray-300">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill"
-          viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
-        </svg>
-      </li>
-      <li
-        class="flex items-center p-2 sm:p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer active">
-        <a href="#Presentations">Présentation</a>
-      </li>
-      <li class="flex items-center text-gray-300">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill"
-          viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
-        </svg>
-      </li>
-      <li
-        class="flex items-center p-2 sm:p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
-        <a href="#Projets">Projets</a>
-      </li>
-      <li class="text-gray-300">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill"
-          viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
-        </svg>
-      </li>
-      <li
-        class="p-2 sm:p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
-        <a href="#Contacts">Contacts</a>
-      </li>
-      <li class="text-gray-300">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill"
-          viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
-        </svg>
-      </li>
-    </ul>
-  </nav>
-</header>
+  <header
+    class="sticky top-0 z-40 border-b border-line bg-surface/80 backdrop-blur supports-[backdrop-filter]:bg-surface/70"
+  >
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-6 py-4">
+      <a
+        routerLink="/"
+        class="font-display text-base font-bold tracking-tight text-ink"
+      >
+        Adrien Houle<span class="text-accent">.</span>
+      </a>
 
-<div class="w-full bg-gradient-to-r from-pink-500 via-red-50 to-yellow-500 background-animate">
-  <section id="Presentations">
-    <div class="flex items-center justify-center w-full h-full">
-      <div class="flex flex-row w-2/3 items-center bg-white my-20 border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-        <img class="object-cover h-full w-3/6 rounded-t-lg h-auto md:rounded-none md:rounded-l-lg" src="../assets/profile.jpg" alt="">
-        <div class="flex flex-col justify-between p-4 leading-normal">
-          <h2 class="mb-2 text-2xl font-bold tracking-tight text-black">Portfolio Adrien Houle</h2>
-          <p class="mb-3 font-normal text-black">
-            Bonjour, je m'appelle Houle Adrien et je suis un développeur passionné par l'imagerie. <br>
-            À travers mon portfolio web, je vous invite à découvrir mon expertise dans le développement logiciel, avec
-            une spécialisation dans les domaines liés à l'imagerie. <br>
-            Explorez mes réalisations et projets pour en apprendre davantage sur mon parcours et mes compétences. <br>
-            Je suis impatient de partager mes connaissances et de contribuer à des projets innovants. <br>
-    
-            Bienvenue dans mon univers digital !
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="Projets">
+      <nav class="hidden md:block">
+        <ul class="flex items-center gap-8 font-sans text-sm font-medium text-ink-soft">
+          <li>
+            <a
+              routerLink="/"
+              routerLinkActive="text-ink"
+              [routerLinkActiveOptions]="{ exact: true }"
+              class="transition-colors hover:text-ink"
+            >{{ t('nav.projects') }}</a>
+          </li>
+          <li>
+            <a
+              routerLink="/presentation"
+              routerLinkActive="text-ink"
+              class="transition-colors hover:text-ink"
+            >{{ t('nav.presentation') }}</a>
+          </li>
+          <li>
+            <a
+              routerLink="/presentation"
+              fragment="contact"
+              class="rounded-full bg-ink px-4 py-1.5 text-surface transition-colors hover:bg-ink-soft"
+            >{{ t('nav.contact') }}</a>
+          </li>
+        </ul>
+      </nav>
 
-    <div *ngIf="projects" class="flex flex-col items-center justify-center w-full">
-      <div *ngFor="let project of projects.projects">
-        <app-project class="" [project]="project"></app-project>
+      <div class="ml-auto flex items-center gap-2 md:ml-0">
+        <app-lang-toggle></app-lang-toggle>
+        <app-theme-toggle></app-theme-toggle>
+
+        <button
+          type="button"
+          (click)="toggleNavbar()"
+          [attr.aria-expanded]="showMenu"
+          [attr.aria-label]="t('nav.menu')"
+          class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-line bg-surface-card text-ink md:hidden"
+        >
+          <svg *ngIf="!showMenu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+          <svg *ngIf="showMenu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
       </div>
     </div>
 
-  </section>
-  <section id="Contacts">
-    <!-- Content for "Contacte" section goes here -->
+    <nav *ngIf="showMenu" class="border-t border-line bg-surface-card md:hidden">
+      <ul class="mx-auto flex max-w-6xl flex-col gap-1 px-6 py-4 font-sans text-base font-medium">
+        <li><a routerLink="/" (click)="closeMenu()" class="block py-2 text-ink-soft hover:text-ink">{{ t('nav.projects') }}</a></li>
+        <li><a routerLink="/presentation" (click)="closeMenu()" class="block py-2 text-ink-soft hover:text-ink">{{ t('nav.presentation') }}</a></li>
+        <li><a routerLink="/presentation" fragment="contact" (click)="closeMenu()" class="block py-2 text-ink-soft hover:text-ink">{{ t('nav.contact') }}</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  </section>
+  <main id="main">
+    <router-outlet></router-outlet>
+  </main>
 
-</div>
+  <footer class="border-t border-line bg-surface">
+    <div class="mx-auto flex max-w-6xl flex-col items-start justify-between gap-2 px-6 py-8 font-sans text-sm text-ink-mute sm:flex-row sm:items-center">
+      <span>{{ t('footer.rights', { year: currentYear }) }}</span>
+      <span>{{ t('footer.built') }}</span>
+    </div>
+  </footer>
+</ng-container>

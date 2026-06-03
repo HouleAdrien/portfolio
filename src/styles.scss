@@ -1,41 +1,66 @@
-
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
-@use '@angular/material' as mat;
-// Plus imports for other components in your app.
-
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-@include mat.core();
-
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$portfolio-primary: mat.define-palette(mat.$indigo-palette);
-$portfolio-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-
-// The warn palette is optional (defaults to red).
-$portfolio-warn: mat.define-palette(mat.$red-palette);
-
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
-$portfolio-theme: mat.define-light-theme((
-  color: (
-    primary: $portfolio-primary,
-    accent: $portfolio-accent,
-    warn: $portfolio-warn,
-  )
-));
-
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include mat.all-component-themes($portfolio-theme);
-
-/* You can add global styles to this file, and also import other style files */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+:root {
+  --ink: 9 9 11;
+  --ink-soft: 63 63 70;
+  --ink-mute: 113 113 122;
+  --surface: 250 250 250;
+  --surface-alt: 244 244 245;
+  --surface-card: 255 255 255;
+  --line: 228 228 231;
+  --muted: 232 236 240;
+  --accent: 37 99 235;
+  --accent-soft: 219 234 254;
+}
+
+:root.dark {
+  --ink: 245 245 247;
+  --ink-soft: 200 200 210;
+  --ink-mute: 140 140 155;
+  --surface: 12 12 16;
+  --surface-alt: 22 22 28;
+  --surface-card: 28 28 36;
+  --line: 45 45 55;
+  --muted: 38 38 48;
+  --accent: 96 165 250;
+  --accent-soft: 30 58 90;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  html,
+  body {
+    background-color: rgb(var(--surface));
+    color: rgb(var(--ink));
+  }
+  body {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+  ::selection {
+    background: rgb(var(--ink));
+    color: rgb(var(--surface));
+  }
+}
+
+.theme-transition,
+.theme-transition *,
+.theme-transition *::before,
+.theme-transition *::after {
+  transition: background-color 0.4s ease, border-color 0.4s ease,
+    color 0.4s ease, fill 0.4s ease, stroke 0.4s ease, box-shadow 0.4s ease !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -10,10 +10,10 @@
       "À côté, je bricole des projets personnels — du jeu vidéo à des expérimentations 3D et graphiques."
     ],
     "photo": "assets/profile.jpg",
-    "email": "adrien.houle@geomatys.com",
+    "email": "adrienhoule01@gmail.com",
     "links": [
       { "label": "GitHub", "href": "https://github.com/HouleAdrien" },
-      { "label": "Email", "href": "mailto:adrien.houle@geomatys.com" }
+      { "label": "Email", "href": "mailto:adrienhoule01@gmail.com" }
     ]
   },
   "timeline": [
@@ -57,14 +57,6 @@
       "title": "DUT Informatique",
       "org": "IUT",
       "summary": "Bases de la programmation, algorithmique et développement orienté objet en Java."
-    },
-    {
-      "startYear": "2019",
-      "endYear": "présent",
-      "kind": "perso",
-      "title": "Projets personnels",
-      "org": "Side projects",
-      "summary": "Jeu vidéo, expérimentations 3D, simulations physiques, sites interactifs et outils graphiques en C++, OpenGL, Unity, Angular et Three.js."
     }
   ],
   "projects": [
@@ -75,7 +67,8 @@
       "year": "2022 — 2023",
       "stack": ["Game dev", "Multijoueur"],
       "thumbnail": "https://img.youtube.com/vi/e6-fkrvjnHo/hqdefault.jpg",
-      "demoUrl": "https://youtu.be/e6-fkrvjnHo"
+      "demoUrl": "https://youtu.be/e6-fkrvjnHo",
+      "featured": true
     },
     {
       "name": "Space Around",
@@ -84,7 +77,8 @@
       "year": "2022",
       "stack": ["Three.js", "JavaScript"],
       "thumbnail": "",
-      "demoUrl": "https://houleadrien.github.io/SpaceAround.github.io/"
+      "demoUrl": "https://houleadrien.github.io/SpaceAround.github.io/",
+      "featured": true
     },
     {
       "name": "Indiagram",
@@ -101,7 +95,8 @@
       "year": "2021",
       "stack": ["OpenGL", "C++"],
       "thumbnail": "https://img.youtube.com/vi/xrMmBEJsRpY/hqdefault.jpg",
-      "demoUrl": "https://youtu.be/xrMmBEJsRpY"
+      "demoUrl": "https://youtu.be/xrMmBEJsRpY",
+      "featured": true
     },
     {
       "name": "Portfolio",
@@ -120,7 +115,8 @@
       "year": "2023 — 2024",
       "stack": ["C++", "Qt", "OpenGL", "GLSL"],
       "thumbnail": "",
-      "codeUrl": "https://github.com/HouleAdrien/Fluids3D-cpp"
+      "codeUrl": "https://github.com/HouleAdrien/Fluids3D-cpp",
+      "featured": true
     },
     {
       "name": "WMS Environment Analyzer",
@@ -155,7 +151,8 @@
       "year": "2020",
       "stack": ["C++", "Qt"],
       "thumbnail": "",
-      "codeUrl": "https://github.com/HouleAdrien/qt_recette"
+      "codeUrl": "https://github.com/HouleAdrien/qt_recette",
+      "featured": true
     }
   ]
 }

@@ -1,0 +1,53 @@
+<ol class="yt relative">
+  <li
+    *ngFor="let marker of orderedMarkers; let i = index"
+    class="yt__row grid grid-cols-[1fr_3rem_1fr] items-center pb-8 last:pb-0"
+  >
+    <div class="yt__cell yt__cell--left">
+      <ng-container *ngIf="i % 2 === 0">
+        <ng-container *ngTemplateOutlet="bubble; context: { $implicit: marker, side: 'left' }"></ng-container>
+      </ng-container>
+    </div>
+
+    <div class="yt__node flex justify-center">
+      <span class="yt__dot" [class.yt__dot--perso]="marker.project.kind === 'perso'" aria-hidden="true"></span>
+    </div>
+
+    <div class="yt__cell yt__cell--right">
+      <ng-container *ngIf="i % 2 === 1">
+        <ng-container *ngTemplateOutlet="bubble; context: { $implicit: marker, side: 'right' }"></ng-container>
+      </ng-container>
+    </div>
+  </li>
+</ol>
+
+<ng-template #bubble let-marker let-side="side">
+  <button
+    type="button"
+    (click)="goToYear(marker.year)"
+    [attr.aria-label]="marker.year + ' — ' + marker.project.name"
+    class="yt__bubble"
+    [class.yt__bubble--left]="side === 'left'"
+    [class.yt__bubble--right]="side === 'right'"
+  >
+    <div class="yt__thumb relative h-20 w-20 shrink-0 overflow-hidden rounded-xl ring-1 ring-line">
+      <img
+        *ngIf="marker.project.thumbnail; else fallback"
+        [src]="marker.project.thumbnail"
+        [alt]="marker.project.name"
+        loading="lazy"
+        class="h-full w-full object-cover"
+      />
+      <ng-template #fallback>
+        <span class="flex h-full w-full items-center justify-center bg-gradient-to-br from-ink to-ink-soft text-sm font-black uppercase tracking-tight text-surface">
+          {{ marker.initials }}
+        </span>
+      </ng-template>
+    </div>
+
+    <div class="min-w-0 text-left">
+      <span class="block font-display text-xl font-bold leading-none tabular-nums text-ink">{{ marker.year }}</span>
+      <span class="mt-1.5 block truncate font-sans text-sm text-ink-soft">{{ marker.project.name }}</span>
+    </div>
+  </button>
+</ng-template>
