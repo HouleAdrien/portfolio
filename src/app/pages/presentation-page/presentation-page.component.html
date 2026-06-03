@@ -1,0 +1,102 @@
+<ng-container *transloco="let t">
+  <ng-container *ngIf="data$ | async as d">
+    <div class="mx-auto w-full max-w-[100rem] px-4 py-16 sm:px-6 sm:py-20 lg:px-10">
+      <div class="grid gap-12 lg:grid-cols-[1fr_30rem] lg:gap-14 xl:grid-cols-[1fr_36rem]">
+        <!-- Left: hero + about merged -->
+        <div id="about" class="min-w-0">
+          <p class="mb-6 inline-flex items-center gap-2 font-sans text-sm font-medium text-ink-soft">
+            <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
+            {{ t('hero.available', { location: d.profile.location }) }}
+          </p>
+
+          <h1 class="font-display font-black uppercase leading-[0.9] tracking-tightest text-ink"
+              style="font-size: clamp(2.5rem, 7vw, 5.5rem);">
+            {{ d.profile.name }}
+          </h1>
+
+          <p class="mt-6 max-w-prose font-sans text-xl leading-snug text-ink-soft sm:text-2xl">
+            {{ d.profile.role }}.
+            <span class="text-ink">{{ d.profile.tagline }}</span>
+          </p>
+
+          <div class="mt-10 grid gap-8 sm:grid-cols-[auto_1fr] sm:items-start sm:gap-10">
+            <img
+              [src]="d.profile.photo"
+              [alt]="d.profile.name"
+              class="h-36 w-36 rounded-2xl object-cover ring-1 ring-line sm:h-44 sm:w-44"
+            />
+            <div>
+              <p class="mb-3 font-sans text-sm font-medium uppercase tracking-wider text-ink-mute">{{ t('about.label') }}</p>
+              <div class="space-y-4 max-w-prose text-base leading-relaxed text-ink-soft">
+                <p *ngFor="let para of d.profile.bio">{{ para }}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-10 flex flex-wrap items-center gap-3">
+            <a
+              routerLink="/"
+              class="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 font-sans text-sm font-medium text-surface transition-transform hover:-translate-y-0.5 hover:shadow-lg"
+            >
+              {{ t('hero.ctaProjects') }}
+              <span aria-hidden="true">→</span>
+            </a>
+            <button
+              type="button"
+              (click)="scrollToId('contact')"
+              class="inline-flex items-center gap-2 rounded-full border border-line bg-surface-card px-6 py-3 font-sans text-sm font-medium text-ink transition-colors hover:border-ink"
+            >
+              {{ t('hero.ctaContact') }}
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: career timeline occupies the right side -->
+        <aside id="timeline" class="lg:sticky lg:top-24 lg:self-start lg:border-l lg:border-line lg:pl-10">
+          <p class="mb-3 font-sans text-sm font-medium uppercase tracking-wider text-ink-mute">{{ t('timeline.label') }}</p>
+          <h2 class="mb-8 font-display text-xl font-bold leading-tight text-ink">
+            {{ t('timeline.title') }}
+          </h2>
+
+          <ul class="relative">
+            <app-timeline-item
+              *ngFor="let entry of d.timeline; let isLast = last"
+              [entry]="entry"
+              [last]="isLast"
+            ></app-timeline-item>
+          </ul>
+        </aside>
+      </div>
+
+      <!-- Contact below -->
+      <section id="contact" class="mt-20 scroll-mt-24 border-t border-line pt-14">
+        <p class="mb-3 font-sans text-sm font-medium uppercase tracking-wider text-ink-mute">{{ t('contact.label') }}</p>
+        <h2 class="font-display text-3xl font-bold leading-tight text-ink sm:text-5xl">
+          {{ t('contact.title') }}
+        </h2>
+        <p class="mt-6 max-w-prose font-sans text-lg text-ink-soft">
+          {{ t('contact.lead') }}
+        </p>
+
+        <div class="mt-10 flex flex-wrap gap-3">
+          <a
+            [href]="'mailto:' + d.profile.email"
+            class="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 font-sans text-sm font-medium text-surface transition-transform hover:-translate-y-0.5 hover:shadow-lg"
+          >
+            {{ d.profile.email }}
+            <span aria-hidden="true">→</span>
+          </a>
+          <a
+            *ngFor="let link of d.profile.links"
+            [href]="link.href"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 rounded-full border border-line bg-surface-card px-6 py-3 font-sans text-sm font-medium text-ink transition-colors hover:border-ink"
+          >
+            {{ link.label }}
+          </a>
+        </div>
+      </section>
+    </div>
+  </ng-container>
+</ng-container>

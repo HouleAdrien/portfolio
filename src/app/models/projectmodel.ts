@@ -30,6 +30,8 @@ export type Project = {
     thumbnail: string;
     demoUrl?: string;
     codeUrl?: string;
+    /** Flagship project for its year — shown in the year timeline. */
+    featured?: boolean;
 };
 
 export type PortfolioData = {

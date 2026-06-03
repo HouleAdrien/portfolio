@@ -11,8 +11,7 @@
   >
     <div class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-6 py-4">
       <a
-        href="#hero"
-        (click)="navigateToElement('hero'); $event.preventDefault()"
+        routerLink="/"
         class="font-display text-base font-bold tracking-tight text-ink"
       >
         Adrien Houle<span class="text-accent">.</span>
@@ -22,36 +21,30 @@
         <ul class="flex items-center gap-8 font-sans text-sm font-medium text-ink-soft">
           <li>
             <a
-              href="#about"
-              (click)="navigateToElement('about'); $event.preventDefault()"
-              class="transition-colors hover:text-ink"
-            >{{ t('nav.about') }}</a>
-          </li>
-          <li>
-            <a
-              href="#timeline"
-              (click)="navigateToElement('timeline'); $event.preventDefault()"
-              class="transition-colors hover:text-ink"
-            >{{ t('nav.timeline') }}</a>
-          </li>
-          <li>
-            <a
-              href="#projects"
-              (click)="navigateToElement('projects'); $event.preventDefault()"
+              routerLink="/"
+              routerLinkActive="text-ink"
+              [routerLinkActiveOptions]="{ exact: true }"
               class="transition-colors hover:text-ink"
             >{{ t('nav.projects') }}</a>
           </li>
           <li>
             <a
-              href="#contact"
-              (click)="navigateToElement('contact'); $event.preventDefault()"
+              routerLink="/presentation"
+              routerLinkActive="text-ink"
+              class="transition-colors hover:text-ink"
+            >{{ t('nav.presentation') }}</a>
+          </li>
+          <li>
+            <a
+              routerLink="/presentation"
+              fragment="contact"
               class="rounded-full bg-ink px-4 py-1.5 text-surface transition-colors hover:bg-ink-soft"
             >{{ t('nav.contact') }}</a>
           </li>
         </ul>
       </nav>
 
-      <div class="ml-auto flex items-center gap-2">
+      <div class="ml-auto flex items-center gap-2 md:ml-0">
         <app-lang-toggle></app-lang-toggle>
         <app-theme-toggle></app-theme-toggle>
 
@@ -74,181 +67,15 @@
 
     <nav *ngIf="showMenu" class="border-t border-line bg-surface-card md:hidden">
       <ul class="mx-auto flex max-w-6xl flex-col gap-1 px-6 py-4 font-sans text-base font-medium">
-        <li><a href="#about" (click)="navigateToElement('about'); $event.preventDefault()" class="block py-2 text-ink-soft hover:text-ink">{{ t('nav.about') }}</a></li>
-        <li><a href="#timeline" (click)="navigateToElement('timeline'); $event.preventDefault()" class="block py-2 text-ink-soft hover:text-ink">{{ t('nav.timeline') }}</a></li>
-        <li><a href="#projects" (click)="navigateToElement('projects'); $event.preventDefault()" class="block py-2 text-ink-soft hover:text-ink">{{ t('nav.projects') }}</a></li>
-        <li><a href="#contact" (click)="navigateToElement('contact'); $event.preventDefault()" class="block py-2 text-ink-soft hover:text-ink">{{ t('nav.contact') }}</a></li>
+        <li><a routerLink="/" (click)="closeMenu()" class="block py-2 text-ink-soft hover:text-ink">{{ t('nav.projects') }}</a></li>
+        <li><a routerLink="/presentation" (click)="closeMenu()" class="block py-2 text-ink-soft hover:text-ink">{{ t('nav.presentation') }}</a></li>
+        <li><a routerLink="/presentation" fragment="contact" (click)="closeMenu()" class="block py-2 text-ink-soft hover:text-ink">{{ t('nav.contact') }}</a></li>
       </ul>
     </nav>
   </header>
 
-  <main id="main" *ngIf="data as d">
-    <section id="hero" class="relative overflow-hidden">
-      <div class="mx-auto max-w-6xl px-6 pb-20 pt-20 sm:pt-32">
-        <p class="mb-6 inline-flex items-center gap-2 font-sans text-sm font-medium text-ink-soft">
-          <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
-          {{ t('hero.available', { location: d.profile.location }) }}
-        </p>
-
-        <h1 class="font-display font-black uppercase leading-[0.9] tracking-tightest text-ink"
-            style="font-size: clamp(2.75rem, 10vw, 8rem);">
-          {{ d.profile.name }}
-        </h1>
-
-        <p class="mt-8 max-w-prose font-sans text-xl leading-snug text-ink-soft sm:text-2xl">
-          {{ d.profile.role }}.
-          <span class="text-ink">{{ d.profile.tagline }}</span>
-        </p>
-
-        <div class="mt-10 flex flex-wrap items-center gap-3">
-          <button
-            type="button"
-            (click)="navigateToElement('projects')"
-            class="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 font-sans text-sm font-medium text-surface transition-transform hover:-translate-y-0.5 hover:shadow-lg"
-          >
-            {{ t('hero.ctaProjects') }}
-            <span aria-hidden="true">↓</span>
-          </button>
-          <button
-            type="button"
-            (click)="navigateToElement('contact')"
-            class="inline-flex items-center gap-2 rounded-full border border-line bg-surface-card px-6 py-3 font-sans text-sm font-medium text-ink transition-colors hover:border-ink"
-          >
-            {{ t('hero.ctaContact') }}
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="border-t border-line bg-surface-card">
-      <div class="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-[auto_1fr] md:items-start md:gap-16">
-        <div class="md:sticky md:top-28">
-          <img
-            [src]="d.profile.photo"
-            [alt]="d.profile.name"
-            class="h-40 w-40 rounded-2xl object-cover ring-1 ring-line md:h-56 md:w-56"
-          />
-        </div>
-
-        <div>
-          <p class="mb-3 font-sans text-sm font-medium uppercase tracking-wider text-ink-mute">{{ t('about.label') }}</p>
-          <h2 class="font-display text-3xl font-bold leading-tight text-ink sm:text-4xl">
-            {{ t('about.title') }}
-          </h2>
-          <div class="mt-6 space-y-4 max-w-prose text-base leading-relaxed text-ink-soft">
-            <p *ngFor="let para of d.profile.bio">{{ para }}</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="timeline" class="border-t border-line">
-      <div class="mx-auto max-w-6xl px-6 py-20">
-        <p class="mb-3 font-sans text-sm font-medium uppercase tracking-wider text-ink-mute">{{ t('timeline.label') }}</p>
-        <h2 class="mb-12 font-display text-3xl font-bold leading-tight text-ink sm:text-4xl">
-          {{ t('timeline.title') }}
-        </h2>
-
-        <ul class="relative">
-          <app-timeline-item
-            *ngFor="let entry of d.timeline; let i = index; let isLast = last"
-            [entry]="entry"
-            [last]="isLast"
-          ></app-timeline-item>
-        </ul>
-      </div>
-    </section>
-
-    <section id="projects" class="border-t border-line bg-surface-card">
-      <div class="mx-auto max-w-6xl px-6 py-20">
-        <div class="mb-10 flex flex-wrap items-end justify-between gap-6">
-          <div>
-            <p class="mb-3 font-sans text-sm font-medium uppercase tracking-wider text-ink-mute">{{ t('projects.label') }}</p>
-            <h2 class="font-display text-3xl font-bold leading-tight text-ink sm:text-4xl">
-              {{ t('projects.title') }}
-            </h2>
-          </div>
-
-          <div role="tablist" [attr.aria-label]="t('projects.filterLabel')" class="inline-flex rounded-full border border-line bg-surface p-1 font-sans text-sm font-medium">
-            <button
-              type="button"
-              role="tab"
-              [attr.aria-selected]="filter === 'all'"
-              (click)="setFilter('all')"
-              class="rounded-full px-4 py-1.5 transition-colors"
-              [class.bg-ink]="filter === 'all'"
-              [class.text-surface]="filter === 'all'"
-              [class.text-ink-soft]="filter !== 'all'"
-            >{{ t('projects.filterAll') }}</button>
-            <button
-              type="button"
-              role="tab"
-              [attr.aria-selected]="filter === 'pro'"
-              (click)="setFilter('pro')"
-              class="rounded-full px-4 py-1.5 transition-colors"
-              [class.bg-ink]="filter === 'pro'"
-              [class.text-surface]="filter === 'pro'"
-              [class.text-ink-soft]="filter !== 'pro'"
-            >{{ t('projects.filterPro') }}</button>
-            <button
-              type="button"
-              role="tab"
-              [attr.aria-selected]="filter === 'perso'"
-              (click)="setFilter('perso')"
-              class="rounded-full px-4 py-1.5 transition-colors"
-              [class.bg-ink]="filter === 'perso'"
-              [class.text-surface]="filter === 'perso'"
-              [class.text-ink-soft]="filter !== 'perso'"
-            >{{ t('projects.filterPerso') }}</button>
-          </div>
-        </div>
-
-        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <app-project-card
-            *ngFor="let project of filteredProjects"
-            [project]="project"
-          ></app-project-card>
-        </div>
-
-        <p
-          *ngIf="filteredProjects.length === 0"
-          class="rounded-2xl border border-dashed border-line py-16 text-center text-sm text-ink-mute"
-        >
-          {{ t('projects.empty') }}
-        </p>
-      </div>
-    </section>
-
-    <section id="contact" class="border-t border-line">
-      <div class="mx-auto max-w-6xl px-6 py-20">
-        <p class="mb-3 font-sans text-sm font-medium uppercase tracking-wider text-ink-mute">{{ t('contact.label') }}</p>
-        <h2 class="font-display text-3xl font-bold leading-tight text-ink sm:text-5xl">
-          {{ t('contact.title') }}
-        </h2>
-        <p class="mt-6 max-w-prose font-sans text-lg text-ink-soft">
-          {{ t('contact.lead') }}
-        </p>
-
-        <div class="mt-10 flex flex-wrap gap-3">
-          <a
-            [href]="'mailto:' + d.profile.email"
-            class="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 font-sans text-sm font-medium text-surface transition-transform hover:-translate-y-0.5 hover:shadow-lg"
-          >
-            {{ d.profile.email }}
-            <span aria-hidden="true">→</span>
-          </a>
-          <a
-            *ngFor="let link of d.profile.links"
-            [href]="link.href"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 rounded-full border border-line bg-surface-card px-6 py-3 font-sans text-sm font-medium text-ink transition-colors hover:border-ink"
-          >
-            {{ link.label }}
-          </a>
-        </div>
-      </div>
-    </section>
+  <main id="main">
+    <router-outlet></router-outlet>
   </main>
 
   <footer class="border-t border-line bg-surface">

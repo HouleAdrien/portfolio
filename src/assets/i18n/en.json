@@ -3,6 +3,7 @@
     "about": "About",
     "timeline": "Career",
     "projects": "Projects",
+    "presentation": "About me",
     "contact": "Contact",
     "menu": "Menu",
     "skipToContent": "Skip to content"
@@ -30,7 +31,9 @@
     "filterPerso": "Personal",
     "empty": "No projects in this category yet.",
     "view": "View the project →",
-    "code": "Source code"
+    "code": "Source code",
+    "byYear": "By year",
+    "sortToggle": "Reverse order"
   },
   "contact": {
     "label": "Contact",

@@ -3,6 +3,7 @@
     "about": "À propos",
     "timeline": "Parcours",
     "projects": "Projets",
+    "presentation": "Présentation",
     "contact": "Contact",
     "menu": "Menu",
     "skipToContent": "Aller au contenu"
@@ -30,7 +31,9 @@
     "filterPerso": "Perso",
     "empty": "Aucun projet dans cette catégorie pour le moment.",
     "view": "Voir le projet →",
-    "code": "Code source"
+    "code": "Code source",
+    "byYear": "Par année",
+    "sortToggle": "Inverser l'ordre"
   },
   "contact": {
     "label": "Contact",
