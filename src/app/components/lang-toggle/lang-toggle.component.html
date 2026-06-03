@@ -1,0 +1,15 @@
+<button
+  type="button"
+  (click)="toggle()"
+  class="lang-toggle relative inline-flex h-9 items-center overflow-hidden rounded-full border border-line bg-surface-card px-3 font-sans text-xs font-semibold uppercase tracking-wider text-ink transition-colors hover:border-ink"
+  [attr.aria-label]="'language.toggle' | transloco"
+  title="{{ 'language.toggle' | transloco }}"
+>
+  <span class="lang-toggle__viewport" aria-hidden="true">
+    <span class="lang-toggle__track" [class.is-fr]="(current$ | async) === 'fr'">
+      <span class="lang-toggle__item">{{ 'language.en' | transloco }}</span>
+      <span class="lang-toggle__item">{{ 'language.fr' | transloco }}</span>
+    </span>
+  </span>
+  <span class="sr-only">{{ ('language.' + (current$ | async)) | transloco }}</span>
+</button>

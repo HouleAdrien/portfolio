@@ -18,21 +18,37 @@
   },
   "timeline": [
     {
-      "startYear": "2023",
+      "startYear": "2021",
       "endYear": "présent",
       "kind": "pro",
       "title": "Développeur logiciel — imagerie",
       "org": "Geomatys",
-      "summary": "Développement d'outils de traitement et de visualisation d'images géospatiales, intégration dans des plateformes web et services de données.",
+      "summary": "En alternance pendant tout mon cursus Ynov puis les masters, et en poste depuis la fin du M2. Développement d'outils de traitement et de visualisation d'images géospatiales, intégration dans des plateformes web et services de données.",
       "link": "https://www.geomatys.com"
     },
     {
-      "startYear": "2021",
+      "startYear": "2023",
+      "endYear": "2024",
+      "kind": "pro",
+      "title": "M2 — Master Imagine",
+      "org": "Université de Montpellier",
+      "summary": "Spécialisation image, géométrie et calcul graphique : traitement d'image, géométrie discrète, rendu, vision stéréo, ML appliqué à l'imagerie. Master obtenu en alternance chez Geomatys."
+    },
+    {
+      "startYear": "2022",
       "endYear": "2023",
       "kind": "pro",
-      "title": "Mastère Expert Informatique",
-      "org": "Ynov",
-      "summary": "Spécialisation développement logiciel et 3D temps réel. Projets en équipe en three.js, jeu vidéo et applications web."
+      "title": "M1 — Expert logiciel, mobile et IoT",
+      "org": "Ynov Toulouse",
+      "summary": "Développement logiciel multi-plateformes, mobile et objets connectés. En alternance chez Geomatys."
+    },
+    {
+      "startYear": "2021",
+      "endYear": "2022",
+      "kind": "pro",
+      "title": "Bachelor Informatique — 3e année",
+      "org": "Ynov Toulouse",
+      "summary": "Approfondissement développement logiciel et 3D temps réel : three.js, jeu vidéo et applications web. En alternance chez Geomatys."
     },
     {
       "startYear": "2019",
@@ -43,12 +59,12 @@
       "summary": "Bases de la programmation, algorithmique et développement orienté objet en Java."
     },
     {
-      "startYear": "2022",
+      "startYear": "2019",
       "endYear": "présent",
       "kind": "perso",
       "title": "Projets personnels",
       "org": "Side projects",
-      "summary": "Jeu vidéo, expérimentations 3D, sites interactifs et outils graphiques en Angular, Three.js et OpenGL."
+      "summary": "Jeu vidéo, expérimentations 3D, simulations physiques, sites interactifs et outils graphiques en C++, OpenGL, Unity, Angular et Three.js."
     }
   ],
   "projects": [
@@ -98,12 +114,48 @@
       "codeUrl": "https://github.com/HouleAdrien/portfolio"
     },
     {
+      "name": "Fluids3D-cpp",
+      "description": "Simulation 3D de fluide en C++/Qt basée sur les équations de Saint-Venant (shallow water), avec rendu OpenGL : shaders GLSL, skybox, grille, sphères et raymarching. Projet du M2 Imagine.",
+      "kind": "perso",
+      "year": "2023 — 2024",
+      "stack": ["C++", "Qt", "OpenGL", "GLSL"],
+      "thumbnail": "",
+      "codeUrl": "https://github.com/HouleAdrien/Fluids3D-cpp"
+    },
+    {
+      "name": "WMS Environment Analyzer",
+      "description": "Outil d'analyse d'images WMS pour détecter et classifier des environnements naturels. Deux approches : algorithmique et machine learning. Réalisé avec Yahnis Saint-Val pendant le M2 Imagine.",
+      "kind": "perso",
+      "year": "2023 — 2024",
+      "stack": ["C++", "Qt", "GDAL", "Python"],
+      "thumbnail": "",
+      "codeUrl": "https://github.com/HouleAdrien/WMS_Environment_Analyzer"
+    },
+    {
+      "name": "Magical Carnage",
+      "description": "Jeu Unity utilisant le tracking des mains pour lancer des sorts procéduraux. Expérimentation autour des gestes et de la génération procédurale d'effets magiques.",
+      "kind": "perso",
+      "year": "2023",
+      "stack": ["Unity", "C#", "HLSL"],
+      "thumbnail": "",
+      "codeUrl": "https://github.com/HouleAdrien/Magical_Carnage"
+    },
+    {
       "name": "Jeux de pente",
       "description": "Projet Java réalisé avec Rohan Ferre à l'IUT — jeu de plateau autour du jeu de pentes.",
       "kind": "perso",
       "year": "2019 — 2020",
       "stack": ["Java"],
       "thumbnail": ""
+    },
+    {
+      "name": "Qt Recette",
+      "description": "Application de gestion de recettes en C++/Qt, réalisée avec Rohan Ferre à l'IUT — un de mes premiers projets en C++, avec documentation Doxygen et diagrammes d'état.",
+      "kind": "perso",
+      "year": "2020",
+      "stack": ["C++", "Qt"],
+      "thumbnail": "",
+      "codeUrl": "https://github.com/HouleAdrien/qt_recette"
     }
   ]
 }
